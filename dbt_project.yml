@@ -6,6 +6,13 @@ name: 'mi_primer_proyecto_formacion'
 version: '1.0.0'
 config-version: 2
 
+#Global variables
+vars:
+  SH_STG: 'SH_STG'
+  SH_ODS: 'SH_ODS'
+  SH_DWH: 'SH_DWH'
+  SH_REP: 'SH_REP'
+  DELTA_DAYS: 90
 # This setting configures which "profile" dbt uses for this project.
 profile: 'snowflake_pro'
 
@@ -29,11 +36,3 @@ clean-targets:         # directories to be removed by `dbt clean `
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
-# In this example config, we tell dbt to build all models in the example/ directory
-# as tables. These settings can be overridden in the individual model files
-# using the `{{ config(...) }}` macro.
-models:
-  my_new_project:
-    # Applies to all files under models/example/
-    example:
-      materialized: view
