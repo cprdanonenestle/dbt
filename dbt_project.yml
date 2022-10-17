@@ -8,13 +8,13 @@ config-version: 2
 
 #Global variables
 vars:
-  SH_STG: 'SH_STG'
-  SH_ODS: 'SH_ODS'
-  SH_DWH: 'SH_DWH'
-  SH_REP: 'SH_REP'
+  SH_STG: 'STG'
+  SH_ODS: 'ODS'
+  SH_DWH: 'DWH'
+  SH_REP: 'REP'
   DELTA_DAYS: 90
 # This setting configures which "profile" dbt uses for this project.
-profile: 'snowflake_pro'
+profile: 'snowflake'
 
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
