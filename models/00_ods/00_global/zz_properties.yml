@@ -6,7 +6,7 @@ models:
     config:
       transient: false
       materialized: incremental
-      schema: '{{ var("SH_ODS") }}'
+      schema: ODS
       alias: DIM_EMPLOYEE
       unique_key: ID_EMPLOYEE
       query_tag: dbt_ods_global_dim_dim_employee
