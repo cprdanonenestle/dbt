@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: ods_global_dim_employee
+    description: 'hello'
+    config:
+      transient: false
+      materialized: incremental
+      schema: '{{ var("SH_ODS") }}'
+      alias: DIM_EMPLOYEE
+      unique_key: ID_EMPLOYEE
+      query_tag: dbt_ods_global_dim_dim_employee
+    columns:
+      - name: ID_EMPLOYEE
+        tests:
+          - unique
+          - not_null
