@@ -1,0 +1,7 @@
+version: 2
+
+seeds:
+  - name: CSV_DIM_POSITIONS
+    config:
+      schema: DLK
+      alias: CSV_DIM_POSITIONS
