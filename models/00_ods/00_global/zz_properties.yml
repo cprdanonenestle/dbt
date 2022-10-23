@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: ods_global_dim_employee
+    description: 'hello'
+    config:
+      transient: false
+      materialized: incremental
+      schema: ODS
+      alias: DIM_EMPLOYEE
+      unique_key: ID_EMPLOYEE
+      query_tag: dbt_ods_global_dim_dim_employee
+    columns:
+      - name: ID_EMPLOYEE
+        tests:
+          - unique
+          - not_null
+          - id_g_than_n:
+              config:
+# Severity coud be setup warn or error, only one option is possible.
+                severity: warn 
+                warn_if: ">1"
+                error_if: ">2"
+              max_id: 1
+              

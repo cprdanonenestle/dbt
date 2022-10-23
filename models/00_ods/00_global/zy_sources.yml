@@ -1,0 +1,10 @@
+version: 2
+sources:
+#Schema environment
+  - name: STG
+    description: '{{ doc("sh_stg_desc") }}'
+    schema: '{{ var("SH_STG") }}'
+#Defined sources at schema environment
+    tables:
+      - name: DIM_EMPLOYEE
+        identifier: DIM_EMPLOYEE
