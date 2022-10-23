@@ -15,3 +15,11 @@ models:
         tests:
           - unique
           - not_null
+          - id_g_than_n:
+              config:
+# Severity coud be setup warn or error, only one option is possible.
+                severity: warn 
+                warn_if: ">1"
+                error_if: ">2"
+              max_id: 1
+              
